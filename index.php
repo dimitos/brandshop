@@ -49,16 +49,26 @@
             ]
         ];
 
-        foreach ($goods as $keyArrayGoods => $zzz)
-        {
-            echo 'Ключ массива: ' . $keyArrayGoods . '<br>';
-            echo $zzz['id'] . '<br>';
-            echo $zzz['name'] . '<br>';
-            echo $zzz['desc'] . '<br>';
-            echo $zzz['img'] . '<br>';
-            echo $zzz['price'] . '<br>';
-            echo '<hr>';
+        $page = $_GET['page'];
+
+        if (!isset($page)) {
+            echo 'здесь вместо этой надписи будет контент для главной страницы';
+        } elseif ($page == 'shop') {
+            echo 'здесь будет страница с товарами';
+        } elseif ($page == 'product') {
+            echo 'а тут у нас будет страница с открытым товаром';
         }
+
+//        foreach ($goods as $keyArrayGoods => $zzz)
+//        {
+//            echo 'Ключ массива: ' . $keyArrayGoods . '<br>';
+//            echo $zzz['id'] . '<br>';
+//            echo $zzz['name'] . '<br>';
+//            echo $zzz['desc'] . '<br>';
+//            echo $zzz['img'] . '<br>';
+//            echo $zzz['price'] . '<br>';
+//            echo '<hr>';
+//        }
 
 
     ?>
