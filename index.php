@@ -25,16 +25,41 @@
 
 <div id="content">
     <?php
-        $product = [
-            'id' => 1,
-            'name' => 'Iphone',
-            'desc' => 'Здесь будет описание для телефона Iphone',
-            'img' => '/images/goods/iphone.jpg',
-            'price' => '2000 $',
+        $goods = [
+            [
+                'id' => 1,
+                'name' => 'Iphone',
+                'desc' => 'Здесь будет описание для телефона Iphone',
+                'img' => '/images/goods/iphone.jpg',
+                'price' => '2000 $',
+            ],
+            [
+                'id' => 2,
+                'name' => 'HTC',
+                'desc' => 'Здесь будет описание для HTC',
+                'img' => '/images/goods/htc.jpg',
+                'price' => '1200 $',
+            ],
+            [
+                'id' => 3,
+                'name' => 'Samsung',
+                'desc' => 'Здесь будет описание для телефона Samsung',
+                'img' => '/images/goods/samsung.jpg',
+                'price' => '1400 $',
+            ]
         ];
-        $product['count'] = 162;
 
-        var_dump($product);
+        foreach ($goods as $keyArrayGoods => $zzz)
+        {
+            echo 'Ключ массива: ' . $keyArrayGoods . '<br>';
+            echo $zzz['id'] . '<br>';
+            echo $zzz['name'] . '<br>';
+            echo $zzz['desc'] . '<br>';
+            echo $zzz['img'] . '<br>';
+            echo $zzz['price'] . '<br>';
+            echo '<hr>';
+        }
+
 
     ?>
 
