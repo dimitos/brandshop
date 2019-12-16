@@ -25,8 +25,16 @@
 
 <div id="content">
     <?php
-        $myVariable = 50;
-        var_dump($myVariable);
+        $product = [
+            'id' => 1,
+            'name' => 'Iphone',
+            'desc' => 'Здесь будет описание для телефона Iphone',
+            'img' => '/images/goods/iphone.jpg',
+            'price' => '2000 $',
+        ];
+        $product['count'] = 162;
+
+        var_dump($product);
 
     ?>
 
