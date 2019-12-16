@@ -24,7 +24,15 @@
 </header>
 
 <div id="content">
-    <div id="promo">
+    <?php
+        $myVariable = 50;
+        var_dump($myVariable);
+
+    ?>
+
+
+
+    <!-- <div id="promo">
         <h1 id="promoText">
             Здесь будет рекламный заголовок
         </h1>
@@ -139,7 +147,7 @@
         </div>
 
 
-    </div>
+    </div> -->
 </div>
 
 <footer>
