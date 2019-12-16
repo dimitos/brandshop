@@ -29,21 +29,21 @@
             [
                 'id' => 1,
                 'name' => 'Iphone',
-                'desc' => 'Здесь будет описание для телефона Iphone',
+                'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eligendi praesentium quibusdam, quo temporibus vel.',
                 'img' => '/images/goods/iphone.jpg',
                 'price' => '2000 $',
             ],
             [
                 'id' => 2,
                 'name' => 'HTC',
-                'desc' => 'Здесь будет описание для HTC',
+                'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eligendi praesentium quibusdam, quo temporibus vel.',
                 'img' => '/images/goods/htc.jpg',
                 'price' => '1200 $',
             ],
             [
                 'id' => 3,
                 'name' => 'Samsung',
-                'desc' => 'Здесь будет описание для телефона Samsung',
+                'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eligendi praesentium quibusdam, quo temporibus vel.',
                 'img' => '/images/goods/samsung.jpg',
                 'price' => '1400 $',
             ]
@@ -56,7 +56,17 @@
         } elseif ($page == 'shop') {
             require('templates/shop.php');
         } elseif ($page == 'product') {
-            echo 'а тут у нас будет страница с открытым товаром';
+            $id = $_GET['id'];
+            $good =[];
+            foreach ($goods as $product)
+            {
+                if ($product['id'] == $id)
+                {
+                    $good = $product;
+                    break;
+                }
+            }
+            require('templates/openedProduct.php');
         }
     ?>
 
